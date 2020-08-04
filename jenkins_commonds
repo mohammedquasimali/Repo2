@@ -1,0 +1,13 @@
+
+Creating instance with apache2, java ,jenkins installed 
+
+#!bin/bash
+sudo su
+apt-get update -y
+apt-get install openjdk-8-jdk -y
+wget –q –O - https://pkg.jenkins.io/debian/jenkins.io.key
+apt-key add jenkins.io.key
+echo deb https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list
+apt-get update -y
+apt-get install jenkins -y
+apt-get install apache2 -y
